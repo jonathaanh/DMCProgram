@@ -3,7 +3,7 @@
 import numpy as np
 from fpdf import FPDF
 
-pdf = FPDF()
+pdf = FPDF('P','mm', (215.9,279.4))
 
 pdf.add_page()
 
