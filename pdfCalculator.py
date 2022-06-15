@@ -10,7 +10,6 @@ class pdfCalculator(object):
         pdf = FPDF('P','mm', (215.9,279.4))
         pdf.add_page()
         pdf.set_font("Arial", size=16)
-        print("I am here")
         #add images and text 
         pdf.image("logo.jpeg")
         pdf.cell(200,10, "a = " + a, ln=1, align='C')

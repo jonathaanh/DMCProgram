@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 from pdfCalculator import pdfCalculator
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST", "GET"])
+@app.route("/")
+def home():
+    return render_template("calculate.html")
+
+@app.route("/calculate", methods=["POST", "GET"])
 def calculate():
     if request.method == "POST":
-        a = request.form["a"]
-        b = request.form["b"]
-        return redirect(url_for("pdf",first=a,second=b))
-    else:
-        return render_template("calculate.html")
+        a = request.form.get("a")
+        b = request.form.get("b")
+        math = int(a) + int(b)
+        #return redirect(url_for("pdf",first=a,second=b))
 
+        return jsonify({"result": str(math)})
+    return "0"
 
-@app.route("/<first>/<second>")
+@app.route("/pdf")
 def pdf(first, second): 
     pdfCalc = pdfCalculator()
     pdfCalc.calculate(first,second)
