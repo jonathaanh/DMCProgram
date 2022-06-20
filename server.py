@@ -23,18 +23,16 @@ def calculate():
         #print(a)
         #print(b)
         math = int(a) + int(b)
-        
+        pdf(a,b)
         #return redirect(url_for("pdf",first=a,second=b))
 
         return jsonify({"result": str(math)})
         
+def pdf(a,b):
+    math = int(a) + int(b)
+    pdfCalc = pdfCalculator()
+    pdfCalc.add(a,b)
+    return pdfCalc.add(a,b)
 
-# @app.route("/pdf")
-# def pdf(first, second): 
-#     pdfCalc = pdfCalculator()
-#     pdfCalc.calculate(first,second)
-#     math = int(first) + int(second)
-#     return f"<h1>{first} + {second} = {math}</h1>"
-    
 if __name__ == "main":
     app.run(debug=True)

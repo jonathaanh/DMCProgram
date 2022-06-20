@@ -21,6 +21,9 @@
         <!-- Button to send data -->
         <button onclick="sendJSON()">submit</button>
         <h1 id="result"></h1>
+        <a href="output.pdf" download="output.pdf">
+            <button>Download File</button>
+        </a>
 </body>
 <script>
     function sendJSON(){
@@ -45,6 +48,7 @@
 
                 // Print received data from server
                 result.innerHTML = JSON.parse(this.responseText).result;
+                
 
             }
         };
@@ -55,6 +59,8 @@
 
         // Sending data with the request
         xhr.send(data);
+
+        
     }    
 
 </script>
