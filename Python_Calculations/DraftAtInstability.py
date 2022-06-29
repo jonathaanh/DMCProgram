@@ -52,5 +52,5 @@ if __name__ == '__main__':
 	KG = 19
 	UseHaulingBlocks = 1
 	T_Ld = 14.04
-	DraftAtInstability(disp, KG, HydrostaticsArrayTxt,T_Ld, UseHaulingBlocks)
+	DraftAtInstability(disp, KG, HydrostaticsArrayTxt, T_Ld, UseHaulingBlocks)
 	

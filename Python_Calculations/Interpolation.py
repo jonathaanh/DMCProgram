@@ -26,7 +26,7 @@ def Interpolate(InputLabel, InputValue, InputArrayLabel, InputArrayTxt, OutputAr
 
 	print("Interpolation")
 	OutputValue = (InputValue-InputArray[index1])*(OutputArray[index2]-OutputArray[index1])/(InputArray[index2]-InputArray[index1])+OutputArray[index1]
-	print("("+InputLabel+"-"+InputArrayLabel+"(0))*("+OutputArrayLabel+"(1)-"+OutputArrayLabel+"(0))/("+InputArrayLabel+"(1)-"+InputArrayLabel+"(0))+"+OutputArrayLabel+"(0)")
+	print(OutputLabel+"=("+InputLabel+"-"+InputArrayLabel+"(0))*("+OutputArrayLabel+"(1)-"+OutputArrayLabel+"(0))/("+InputArrayLabel+"(1)-"+InputArrayLabel+"(0))+"+OutputArrayLabel+"(0)")
 	print(OutputLabel + " = " + str(OutputValue))
 	print()
 
