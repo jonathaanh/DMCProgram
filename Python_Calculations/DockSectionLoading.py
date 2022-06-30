@@ -72,9 +72,10 @@ def DockSectionLoading(LKBearingLengthsTxt, LL_a, LL_f,SternToStill):
 
 if __name__ == '__main__':
 	if v:
-		"""
+		
 		LL_a = 18.89
 		LL_f = 7.39
+		""""
 		LKBearingLengthsTxt = "[0,0,82.17,96,89.33,0,0,0]"
 		LK = 267.42
 		m = (LL_a-LL_f)/LK

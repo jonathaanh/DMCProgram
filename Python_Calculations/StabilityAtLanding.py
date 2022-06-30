@@ -34,4 +34,5 @@ def StabilityAtLanding(disp, KM, KG, UseHaulingBlocks):
 if __name__ == '__main__':
 	if v:
 		#take in caluclated R_Kn
+		R_Kn = 20064
 		StabilityAtLanding(v.disp, v.KM, v.KG, v.UseHaulingBlocks)

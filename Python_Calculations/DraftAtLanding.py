@@ -16,4 +16,5 @@ def DraftAtLanding(T_m, Im):
 
 if __name__ == "__main__":
 	if v:
+		R_Kn = 20064
 		DraftAtLanding(v.T_m, v.Im)

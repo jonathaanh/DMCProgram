@@ -56,6 +56,6 @@ def WindLoading(v_W, disp, SBPL, HB_SB, n_SB, A_SB, S_MC, array):
 
 
 if __name__ == "__main__":
-	WindLoading(v.v_W, v.disp, v.SBPL, v.HB_SB, v.n_SB, v.A_SB, v.S_MC,
-	"([15068,2337,925],[19.9, 50.7,82.7])")
+	WindLoadingArray = "([15068,2337,925],[19.9, 50.7,82.7])"
+	WindLoading(v.v_W, v.disp, v.SBPL, v.HB_SB, v.n_SB, v.A_SB, v.S_MC, WindLoadingArray)
 

@@ -1,6 +1,6 @@
 from inputVariables import *
 
-def OperationalWindow(D_D, h_MLLW, h_Clr):
+def OperationalWindow(D_D, h_MLLW, h_Clr, h_E):
 	print("Operational Window")
 	print() 
 
@@ -18,4 +18,5 @@ def OperationalWindow(D_D, h_MLLW, h_Clr):
 if __name__ == "__main__":
 	if v:
 		#take in calculated h_E value
-		OperationalWindow(v.D_D, v.h_MLLW, v.h_Clr)
+		h_E = 10
+		OperationalWindow(v.D_D, v.h_MLLW, v.h_Clr, v.h_E)
