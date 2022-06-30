@@ -29,13 +29,23 @@ def MakeTrapezoid(x,y):
 
 	fig = plt.figure()
 	ax = fig.add_subplot(111, aspect='equal')
+	ax.set_xlim(0, 10)
+	ax.set_ylim(0, 10)
   
-	plt.xlabel('Y-axis')
-	plt.ylabel('X-axis')
-	plt.title('Title')
+	plt.xlabel('Length (feet)')
+	plt.ylabel('LL (LT/ft)')
+	plt.title('LL (LT/ft) vs Length (feet)')
+	ax.add_patch(patches.Polygon(xy=list(zip(x,y)), fill=True))
 
-	ax.add_patch(patches.Polygon(xy=list(zip(x,y)), fill=False))
+	LL_aX = [0, LK]
+	LL_aY = [LL_a, LL_a]
+	ax.plot(LL_aX, LL_aY, linestyle='dashed')
+	ax.annotate("LL_a",(0,LL_a),ha='left')
 
+	LL_fX = [0, f]
+	LL_fY = [LL_f, LL_f]
+	ax.plot(LL_fX, LL_fY, linestyle='dashed')
+	ax.annotate("LL_f",(0,LL_f),ha='left')
 		
 	curr_dir = os.path.dirname(__file__)
 	output_dir = os.path.join(curr_dir, 'Graphs/')
@@ -50,9 +60,10 @@ if __name__ == '__main__':
 	#time = ["2200","0500","1100"]
 	#tide = [-1,6,1]
 	#MakeGraph(time,tide)
-	LK = 10
-	LL_a = 10
-	LL_f = 3
-	x = [0,LK,0, LK]
-	y = [0,0,LL_f, LL_a]
+	LK = 8
+	LL_a = 9
+	LL_f = 5
+	f = 2
+	x = [f,LK,LK, f]
+	y = [0,0,LL_a, LL_f]
 	MakeTrapezoid(x,y)
