@@ -5,7 +5,7 @@ from Interpolation import Interpolate
 
 def DraftAtInstability(disp, KG, HydrostaticsArrayTxt, T_Ld, UseHaulingBlocks):
 
-	print("Draft At Instability")
+	print("<T>Draft At Instability")
 	print()
 
 	print("disp = " + str(disp))
@@ -25,7 +25,7 @@ def DraftAtInstability(disp, KG, HydrostaticsArrayTxt, T_Ld, UseHaulingBlocks):
 	print("Required Righting Moment")
 	print("M_R = disp x KG")
 	M_R = disp * KG
-	print(M_R)
+	print("M_R = " + str(M_R))
 	print()
 
 	T_I = Interpolate("M_R", M_R, "M_RB(T_m)", M_RB, "T_m", HydrostaticsArray[0], "T_I")
