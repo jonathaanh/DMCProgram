@@ -9,7 +9,7 @@ def WindLoading(v_W, disp, SBPL, HB_SB, n_SB, A_SB, S_MC, SailAreaArrayTxt):
 
 	print("Overturning Moment")
 	SailAreaArray = np.array(eval([SailAreaArrayTxt[1],SailAreaArrayTxt[2]]))
-	table = pd.DataFrame({"Item":SailAreaArrayTxt[0], Sail"Sail Area": SailAreaArray[1], "Center height to the Keel": SailAreaArray[2] })
+	table = pd.DataFrame({"Item":SailAreaArrayTxt[0],"Sail Area": SailAreaArray[1], "Center height to the Keel": SailAreaArray[2] })
 	M_A = 0
 	for i in range(0,3):
 		M_A = M_A + (SailAreaArray[1][i])*(SailAreaArray[2][i])
@@ -56,6 +56,6 @@ def WindLoading(v_W, disp, SBPL, HB_SB, n_SB, A_SB, S_MC, SailAreaArrayTxt):
 
 
 if __name__ == "__main__":
-	WindLoadingArray = "[Hull,Deck house,Mast],[15068,2337,925],[19.9, 50.7,82.7]"
+	SailAreaArrayTxt = "[Hull,Deck house,Mast],[15068,2337,925],[19.9, 50.7,82.7]"
 	WindLoading(v.v_W, v.disp, v.SBPL, v.HB_SB, v.n_SB, v.A_SB, v.S_MC, SailAreaArrayTxt)
 

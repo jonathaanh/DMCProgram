@@ -1,0 +1,315 @@
+<I>logo.jpeg
+
+<T>Average Block Loading
+ 
+A_KB = 0.0
+n_KB = 0.0
+A_SB = 0.0
+A_SB = 0.0
+disp = 3510
+S_SA = 0.0
+ 
+Total Keel Block Bearing Area
+A_KBt = A_KB * n_KB
+0.0
+ 
+Total Side Block Bearing Area
+A_SBt = A_SB * n_SB
+0.0
+ 
+Total Block Bearing Area
+A_Bt = A_KBt + A_SBt
+0.0
+ 
+Block Stress
+S_B = (disp * CF_W) / A_Bt 
+S_B is inf
+ 
+Block Stress Check
+S_B < S_SA
+Fail
+ 
+<T>Capacity
+ 
+disp = 3510
+disp_max = 0.0
+ 
+Maximum Displacement Check
+disp < disp_max
+Fail
+ 
+Dock Section Loading
+ 
+LL_a = 18.89
+LL_f = 7.35
+m = 0.043
+SternToSill = 1.0
+ 
+LK Bearing Lengths
+  Sections  Bearing Lengths
+0        A                0
+1        B                0
+2        C                0
+3        D                0
+4        E                0
+5        F                0
+6        G                0
+7        H                0
+ 
+Section Differentials = m x LK Bearing Lengths
+  Sections  Bearing Lengths
+0        A              0.0
+1        B              0.0
+2        C              0.0
+3        D              0.0
+4        E              0.0
+5        F              0.0
+6        G              0.0
+7        H              0.0
+ 
+Bulkhead Line Loads
+  Bulkheads  Line Loads
+0    A/Sill        0.00
+1       B/A        0.00
+2       C/B        0.00
+3       D/C       18.89
+4       E/D        0.00
+5       F/E        0.00
+6       G/F        0.00
+7       H/G        0.00
+8     End/H        0.00
+ 
+Averaged Bulkhead Line Loads
+  Bulkheads  Line Loads
+0         A         0.0
+1         B         0.0
+2         C         0.0
+3         D         0.0
+4         E         0.0
+5         F         0.0
+6         G         0.0
+7         H         0.0
+ 
+Section Loading = Averaged Bulkhead Line Loads x LK Bearing Lengths
+  Bulkheads  Line Loads
+0         A         0.0
+1         B         0.0
+2         C         0.0
+3         D         0.0
+4         E         0.0
+5         F         0.0
+6         G         0.0
+7         H         0.0
+ 
+Draft At Landing
+ 
+T_m = 14.5
+R_Kn = 178.1
+Im = 32.5
+ 
+T_Ld = T_m - (R_Kn/ (Im * CF_L))
+14.043333333333333
+ 
+Initial Stability
+ 
+KM = 22.5
+KG  = 0.0
+ 
+GM = KM - KG
+22.5
+Stability Check
+GM_Ld >= 1 ft (Hauling)
+Pass
+Knuckle Reaction
+ 
+t_r = 2
+d_AP = 0.0
+LBP = 0.0
+LCF = 23.65
+OHA = 0.0
+LK = 0.0
+D = 0.0
+MCT = 740
+A_KB = 0.0
+S_SA = 0.0
+ 
+Knuckle Reaction Lever Arm
+ 
+t_r > 0
+Aft Knuckle: d_AP + LBP/2 - LCF - OHA
+-23.65
+Safety Factor
+OHA >= 1.5 * D
+Large Overhang: 0.94
+ 
+Knuckle Reaction
+R_Kn = (t_r x MCT x CF_L)/ k x X_Kn
+-446834.0425531915
+ 
+Knuckle Reaction Stress
+S_Kn = (R_Kn x CF_W)/ A_KB
+S_Kn = inf
+ 
+Knuckle Reaction Stress Check
+S_Kn < S_SA
+1000000000
+ 
+Pass
+ 
+<T>Maximum Allowable Trim
+LBP = 0.0
+t = 2
+t_max = LBP/100
+ 
+<T>Maximum Trim Check
+|t| < t_max
+Fail
+ 
+<T>Max Draft
+ 
+T_a = 0.0
+T_f = 0.0
+ 
+T_max = max(T_a, T_f)
+0.0
+ 
+<T>Mean Draft
+ 
+T_a = 0.0
+T_f = 0.0
+ 
+(T_a + T_f)/2
+0.0
+ 
+<T>Offset for List
+ 
+l_T = 0.0
+depth = 0.0
+B_T = 0.0
+ 
+O_l = (l_T * depth * CF_L)/ B_T
+O_l = inf
+ 
+<T>Offset for Trim
+ 
+LBP = 0.0
+t_r = 2
+depth = 0.0
+ 
+O_t = (t_r * depth * CF_L)/ LBP
+O_t = inf
+ 
+<T>Operational Window
+ 
+h_E = 34.59
+D_D = 0.0
+h_MLLW = 0.0
+h_Clr = 0.0
+ 
+(h_E + D_D  + h_Clr) - h_MLLW
+34.59
+ 
+<T>Relative Trim
+ 
+t = 2
+t_B = 0
+ 
+t_r = t-t_B
+2 
+ 
+<T>Seismic Block Loading
+ 
+disp = 3510
+KG = 0.0
+EAF = 0.0
+SBPL = 0.0
+HB_SB = 0.0
+n_SB = 0.0
+A_SB = 0.0
+S_MC = 0.0
+ 
+Earthquake Overturning Movement
+M_E = EAF x disp x KG
+0.0
+ 
+Dead Load
+L_D = disp * SBPL/(2*100)
+0.0
+ 
+Applied Load onto Side Blocks
+L_A = M_E/HB_SB + L_D
+100000000000.0
+ 
+Side Block Stress
+S_SB = (L_A * CF_W)/(n_SB/2*A_SB)
+2.24e+25
+ 
+Side Block Stress Check
+S_SB < S_MC
+Fail
+ 
+<T>Trapezoidal Loading Approximation
+ 
+disp = 3510
+LK = 0.0
+OHA = 0.0
+d_AP = 0.0
+LBP = 0.0
+LCG = 0.0
+LL_max = 0.0
+ 
+Average Line Load
+LL_avg = disp/LK
+10000000000
+Center of Gravity Eccentricity
+e = OHA + LK/2 - d_AP - LBP/2 + LCG
+0.0
+ 
+Differential Line Load
+LL_dif = 6*disp*e/LK^2
+100000000
+ 
+Line Load Aft
+LL_a = LL_avg + LL_dif
+10100000000
+ 
+Line Load Forward
+LL_f = LL_avg - LL_dif
+9900000000
+ 
+Line Load Check
+LL_max > LL_f & LL_a
+Fail
+ 
+Trapezoidal Slope
+m = (LL_a - LL_f)/ LK
+10000000000
+ 
+<T>Trim
+ 
+T_a = 0.0
+T_f = 0.0
+ 
+t = T_a - T_f
+0.0
+  
+<T>Trim of the Blocks
+
+LBP = 0.0
+t_Bagl = 0
+ 
+t_B = LBP*tan(t_Bagl)
+0.0
+ 
+<T>Vertical Clearance
+ 
+T_max = 15.5
+h_Prj = 0.0
+h_Clr = 0.0
+h_SB = 0.0
+h_BL = 0.0
+ 
+h_E = T_max + h_Prj + h_Clr + h_SB + h_BL
+15.5
+
+<I>./graphs/graph1.png

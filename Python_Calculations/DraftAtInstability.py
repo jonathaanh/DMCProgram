@@ -47,7 +47,7 @@ def DraftAtInstability(disp, KG, HydrostaticsArrayTxt, T_Ld, UseHaulingBlocks):
 	
 if __name__ == '__main__':
 	#if v:
-	#HydrostaticsArrayTxt = "[15,14,13,12],[3655,3270,2900,2560],[766,720,650,585],[32.30,31.45,30.25,28.80],[22.35,22.5,22.65,22.8],[23.65,22.60,18.80,14.9]"
+	HydrostaticsArrayTxt = "[15,14,13,12],[3655,3270,2900,2560],[766,720,650,585],[32.30,31.45,30.25,28.80],[22.35,22.5,22.65,22.8],[23.65,22.60,18.80,14.9]"
 	disp = 3510
 	KG = 19
 	UseHaulingBlocks = 1

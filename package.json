@@ -1,0 +1,23 @@
+{
+  "name": "dmcprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdfGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathaanh/DMCProgram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathaanh/DMCProgram/issues"
+  },
+  "homepage": "https://github.com/jonathaanh/DMCProgram#readme",
+  "dependencies": {
+    "jspreadsheet-ce": "^4.11.1",
+    "spawn-sync": "^2.0.0"
+  }
+}
